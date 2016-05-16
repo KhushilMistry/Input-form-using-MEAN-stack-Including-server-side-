@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<title>Resume Form</title>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<style>
+#hidep{
+	display:none;
+}
+#hideprofes{
+	display:none;
+}
+</style>
+</head>
+<body>
+<div class="w3-container w3-blue-grey w3-text-dark-grey">
+<img src="da.jpg" class="w3-left w3-padding-32">
+<h2 style="text-align:center;">Dhirubhai Ambani Institute of Information and Communication Technology</h2>
+<h1 style="text-align:center;">Resume-Form</h1>
+</div>
+
+<div class="w3-container w3-blue-grey w3-text-black">
+<form action="http://localhost:1234/users" method="post">
+<div class="w3-border-bottom w3-border-white w3-text-dark-grey">
+<h2>General Information:</h2>
+</div>
+<div class="w3-row-padding">
+<div class="w3-half">
+<p style="font-size:130%;">Name:</p>
+<input class="w3-input w3-dark-grey w3-hover-grey" type="text" name="name" required placeholder="You Full Name"><br>
+</div>
+<div class="w3-half">
+<p style="font-size:130%;">Email:</p>
+<input class="w3-input w3-dark-grey w3-hover-grey" type="email" name="email" required placeholder="@daiict.ac.in"><br>
+</div>
+<p style="font-size:130%;">Adress:</p>
+<div class="w3-row-padding">
+<div class="w3-third">
+<label style="font-size:110%;">Wing:</label>
+<input  class=" w3-input w3-dark-grey w3-hover-grey" type="text" name="wing" required>
+</div>
+<div class="w3-third">
+<label style="font-size:110%;">Room:</label>
+<input  class=" w3-input w3-dark-grey w3-hover-grey" type="text" name="room" required>
+</div>
+<div class="w3-third">
+<label style="font-size:110%;">HOR:</label>
+<select  class=" w3-input w3-dark-grey" type="text" name="HOR" required>
+<<option value="Men">Men</option>
+<option value="Women">Women</option>
+</select><br><br>
+</div>
+</div>
+</div>
+</div>
+<div class="w3-container w3-blue-grey w3-text-black">
+<div class="w3-border-bottom w3-border-white w3-text-dark-grey">
+<h2>Education:</h2>
+</div>
+<p style="font-size:130%;">Education:</p>
+<input class="w3-input w3-dark-grey w3-hover-grey" type="text" name="education" required placeholder="Education"><br>
+</div>
+<div class="w3-container w3-blue-grey w3-text-black">
+<div class="w3-border-bottom w3-border-white w3-text-dark-grey">
+<h2>Skills:</h2>
+</div>
+<div class="w3-row-padding">
+<div class="w3-half">
+<p style="font-size:130%;">Area of Intrest:</p>
+<input class="w3-input w3-dark-grey w3-hover-grey" type="text" name="int" required placeholder="Areas of Intrest"><br>
+</div>
+<div class="w3-half">
+<p style="font-size:130%;">Programming languages:</p>
+<input type="text" name="pro" class="w3-input w3-dark-grey w3-hover-grey" placeholder="Programming languages" required><br>
+</div>
+</div>
+<div class="w3-row-padding">
+<div class="w3-half">
+<p style="font-size:130%;">Tools and Technologies:</p>
+<input type="text" name="tt" required class="w3-input w3-dark-grey w3-hover-grey" placeholder="Tools and Technologis"><br>
+</div>
+<div id="hideEle" class="w3-half">
+<p style="font-size:130%;">Electives:<span id="e" class="w3-right w3-hover w3-hover-grey" style="cursor:pointer;">x</span></p>
+<input type="text" name="ele" required class="w3-input w3-dark-grey w3-hover-grey" placeholder="Electives"><br>
+</div>
+<p class="w3-center" id="hidep"><span class="w3-border-bottom w3-border-black w3-hover-grey" id="display">Click Here</span> to add Electives field</p>
+</div>
+</div>
+<div class="w3-container w3-blue-grey w3-text-black">
+<div class="w3-border-bottom w3-border-white w3-text-dark-grey">
+<h2>Internship and Professional Exeperience:</h2>
+</div>
+<div id="hidePro">
+<p style="font-size:130%;">Professional Exeperience:<span id="p" class="w3-right w3-hover w3-hover-grey" style="cursor:pointer;">x</span></p>
+<textarea type="text" name="exe" required class="w3-input w3-dark-grey w3-hover-grey" placeholder="Professional Exeperience"></textarea><br>
+</div>
+<p class="w3-center" id="hideprofes"><span class="w3-border-bottom w3-border-black w3-hover-grey" id="clickh">Click Here</span> to add Professional Exeperience field</p>
+<div class="w3-row-padding">
+<div class="w3-third">
+<p style="font-size:130%;">Rural Internship:</p>
+<input type="text" name="rname" required class="w3-input w3-dark-grey w3-hover-grey" placeholder="Rural Internship"><br>
+</div>
+<div class="w3-third">
+<p style="font-size:130%;">Guide Name:</p>
+<input type="text" name="gname" required class="w3-input w3-dark-grey w3-hover-grey" placeholder="Guide Name"><br>
+</div>
+<div class="w3-third">
+<p style="font-size:130%;">Team Size:</p>
+<input type="number" name="size" required class="w3-input w3-dark-grey w3-hover-grey"><br>
+</div>
+</div>
+<p style="font-size:130%;">Description:</p>
+<textarea name="des" required class="w3-input w3-dark-grey w3-hover-grey" placeholder="Description-Maximum lenght 2 lines"></textarea><br>
+</div>
+<div class="w3-container w3-blue-grey w3-text-black">
+<div class="w3-border-bottom w3-border-white w3-text-dark-grey">
+<h2>Projects:</h2>
+</div><br>
+<input type="text" name="proj" required class="w3-input w3-dark-grey w3-hover-grey" placeholder="Project Names here"><br>
+</div>
+<div class="w3-container w3-blue-grey w3-text-black">
+<div class="w3-border-bottom w3-border-white w3-text-dark-grey">
+<h2>Position of Responsibility:</h2>
+</div><br>
+<input type="text" name="ref" required class="w3-input w3-dark-grey w3-hover-grey" placeholder="Position of responsibility"><br>
+</div>
+<div class="w3-container w3-blue-grey w3-text-black">
+<div class="w3-border-bottom w3-border-white w3-text-dark-grey">
+<h2>Awards and Acheivnments:</h2>
+</div><br>
+<input type="text" name="ana" required class="w3-input w3-dark-grey w3-hover-grey" placeholder="Any 3 Awards and Acheivnmments"><br>
+</div>
+<div class="w3-container w3-blue-grey w3-text-black">
+<div class="w3-border-bottom w3-border-white w3-text-dark-grey">
+<h2>Intrest and Hobbies:</h2>
+</div><br>
+<input type="text" name="inh" required class="w3-input w3-dark-grey w3-hover-grey" placeholder="Intrests and Hobbies"><br><br>
+<p style="text-align:center;"><input type="submit" value="Submit" class="w3-btn"></p>
+<br><br>
+</div>
+</form>
+<script>
+$(document).ready(function(){
+    $("#e").click(function(){
+        $("#hideEle").hide();
+        $("#hidep").show();
+    });
+   	$("#display").click(function(){
+   		$("#hideEle").show();
+   		$("#hidep").hide();
+   	});
+
+   	$("#p").click(function(){
+        $("#hidePro").hide();
+        $("#hideprofes").show();
+    });
+   	$("#clickh").click(function(){
+   		$("#hidePro").show();
+   		$("#hideprofes").hide();
+   	});
+
+});
+
+</script>
+</body>
+</html>
