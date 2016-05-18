@@ -3,6 +3,7 @@ var app=express();
 var bodyParser=require('body-parser');
 var mongoose=require('mongoose');
 var User=require('./User.model');
+var path=require('path');
 
 var port=1234;
 var db='mongodb://localhost/placement'
@@ -15,7 +16,12 @@ app.use(bodyParser.urlencoded({
  
 
 app.get('/',function(req,res){
-	res.send('Its Working..!!!');
+  
+	res.sendFile(path.join(__dirname +'/form.html'));
+});
+
+app.get('/da.jpg',function(req,res){
+  res.sendFile(path.join(__dirname +'/da.jpg'));
 });
 
 app.get('/users',function(req,res){
@@ -59,7 +65,7 @@ app.post('/users', function(req, res) {
       res.send('Fill All the required fields');
     } else {
       console.log(users);
-      res.send(users);
+      res.sendFile(path.join(__dirname +'/display.html'));
     }
   });
 });
